@@ -2,7 +2,8 @@
     //USANDO OPERADOR TERNÁRIO USANDO OPERADOR TERNÁRIO USANDO OPERADOR TERNÁRIO
     
     //PROBLEMA: Dificuldade do Programa
-    //Peça para o Programador informar a quantidade de linhas que o programa possui. Também peça para o Programador informar a quantidade de if-else que o programa possui. O outro dado que o Programador deverá informar é a quantidade de if-ternário que o programa possui.
+    //Peça para o Programador informar a quantidade de linhas que o programa possui. Também peça para o Programador informar a quantidade de if-else que o programa possui. 
+    //O outro dado que o Programador deverá informar é a quantidade de if-ternário que o programa possui.
     //Considere que cada linha vale um ponto, cada if-else vale 2 pontos e cada operador ternário vale 3 pontos.
     
     //Se o programa possuir até 25 pontos (inclusive), será considerado de nível CALOURO
@@ -11,11 +12,18 @@
     //Calcule os pontos e apresente o nível de complexidade do programa
 
     //ENTRADA
-
+    const linhas = parseInt(prompt("Informe quantas linhas o seu programa possui"));
+    const ifElse = parseInt(prompt("Informe a quantidade de If Else que o seu programa possui "));
+    const ifTernario = parseInt(prompt("Informe a quantidade de If-ternario que o seu programa possui"));
+    let mensagem ;
+    
 
     //PROCESSAMENTO
+    const pontos = linhas + (ifElse * 2) + (ifTernario * 3);
 
+    (pontos <= 25) ? mensagem = "CALOURO" : 
+    mensagem = "VETERANO"
 
     //SAÍDA
-
+    document.write(mensagem);
 </script>

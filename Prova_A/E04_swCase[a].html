@@ -2,7 +2,8 @@
     //SWITCH CASE SWITCH CASE SWITCH CASE
 
     //PROBLEMA: Compra de fruta na feira
-    //Peça para o usuário informar a fruta que deseja comprar na feira. Crie uma estrutura condicional que analise que fruta o usuário comprou e retorne mensagem de acordo com a seguinte situação:
+    //Peça para o usuário informar a fruta que deseja comprar na feira. Crie uma estrutura condicional que analise que fruta o usuário comprou e retorne 
+    //mensagem de acordo com a seguinte situação:
     //Se informou laranja, retornará a mensagem "A laranja está em falta".
     //Se informou kiwi, retornará a mensagem "O kiwi está acabando".
     //Se informou melancia, retornará a mensagem "O quilo da melancia é R$ 3,00".
@@ -12,11 +13,24 @@
     //DICA: Use L para laranja, K para kiwi, M para melancia
 
     //ENTRADA
-
+    const frutas = prompt("Informe a fruta que deseja comprar (L - laranja | K - kiwi | M - melancia").toUpperCase();
+    let mensagem;
 
     //PROCESSAMENTO
-
+    switch (frutas) {
+        case "L":
+            mensagem = "A laranja está em falta"
+            break;
+        case "K":
+            mensagem = "O kiwi esta acabando"
+            break;
+        case "M":
+            mensagem = "O quilo da melancia esta R$3,00"
+            break;
+        default: mensagem = "Fruta invalida"
+            break;
+    }
 
     //SAÍDA
-
+    document.write(mensagem);
 </script>

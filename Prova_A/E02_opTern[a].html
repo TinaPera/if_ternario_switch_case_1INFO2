@@ -1,3 +1,4 @@
+
 <script>
     //USANDO OPERADOR TERNÁRIO USANDO OPERADOR TERNÁRIO USANDO OPERADOR TERNÁRIO
     
@@ -9,11 +10,17 @@
     //Apresente a situação final do aluno
 
     //ENTRADA
-
+    const nota1 = Number(prompt("Informe a sua nota do 1° trimestre"));
+    const nota2 = Number(prompt("Informe a sua nota do 2° trimestre"));
+    const nota3 = Number(prompt("Informe sua nota do 3° trimestre"));
+    let resultado;
 
     //PROCESSAMENTO
+    (nota1 <= 4 | nota2 <= 4 | nota3 <= 4) ? resultado = "REPROVADO" : 
+    (nota1 <= 6 | nota2 <= 6 | nota3 <= 6) ? resultado = "EXAME" :
+    resultado = "APROVADO"
 
 
     //SAÍDA
-
+    document.write(resultado);
 </script>

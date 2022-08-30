@@ -10,11 +10,15 @@
     //Apresente o valor final do veículo, considerando o juro estabelecido para a quantidade de parcelas.
 
     //ENTRADA
-
+    const valorVeiculo = Number(prompt("Informe o valor do veiculo que voce deseja comprar"));
+    const parcelas = parseInt(prompt("Informe em quantas parcelas voce deseja financiar"));
+    let resultado;
 
     //PROCESSAMENTO
-
+    (parcelas <= 12) ? resultado = `Valor final considerando o juro fica de ${valorVeiculo + (parcelas * 0.05)}` : 
+    (parcelas <= 24) ? resultado = `Valor final considerando o juro fica de ${valorVeiculo + (parcelas * 0.1)}` : 
+    resultado = `Valor final considerando o juro fica de ${valorVeiculo + (parcelas * 0.2)}`;
 
     //SAÍDA
-
+    document.write(resultado);
 </script>

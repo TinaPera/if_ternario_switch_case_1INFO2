@@ -10,11 +10,27 @@
     //Calcule e apresente o preço final da venda de acordo com o Tipo do Cliente
 
     //ENTRADA
-
+    const valorVenda = Number(prompt("Informe o valor total da venda"));
+    const tipoCliente = prompt("Informe o tipo do cliente (CM - cliente comum | CV - cliente vip | F - funcionario").toUpperCase();
+    let resultado;
 
     //PROCESSAMENTO
-
+    switch (tipoCliente) {
+        case "CM":
+            resultado = `preço final de ${valorVenda - (1/100)}`
+            break;
+        case "CV":
+            resultado = `preço final de ${valorVenda - (5/100)}`
+            break;
+        case "F": 
+            resultado = `preço final de ${valorVenda - (10/100)}`    
+            break;
+        default:
+            resultado = "Cliente invalido"
+            break;
+            
+    }
 
     //SAÍDA
-
+    document.write(resultado);
 </script>
